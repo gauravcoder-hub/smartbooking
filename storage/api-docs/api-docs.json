@@ -1,0 +1,41 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Smart Booking API",
+        "description": "API documentation for Table Reservation System",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/availability": {
+            "get": {
+                "tags": [
+                    "Reservations"
+                ],
+                "summary": "Get available time slots",
+                "operationId": "ac4ac13195755a91ad8c53e5d1426f0c",
+                "parameters": [
+                    {
+                        "name": "date",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "date"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Available slots"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Reservations",
+            "description": "Reservations"
+        }
+    ]
+}
