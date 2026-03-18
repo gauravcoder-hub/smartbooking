@@ -11,23 +11,7 @@ use OpenApi\Annotations as OA;
 
 class ReservationController extends Controller
 {
-    /**
- * @OA\Get(
- *     path="/api/availability",
- *     summary="Get available time slots",
- *     tags={"Reservations"},
- *     @OA\Parameter(
- *         name="date",
- *         in="query",
- *         required=true,
- *         @OA\Schema(type="string", format="date")
- *     ),
- *     @OA\Response(
- *         response=200,
- *         description="Available slots"
- *     )
- * )
- */
+    
     public function availability(Request $request)
     {
         $request->validate([
